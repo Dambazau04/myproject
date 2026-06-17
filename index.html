@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>Darul Hadeethi Salafiyya – School System</title>
+    <title>Darun Nasihatus Salafiyyah Bari School</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -185,12 +185,22 @@
             -webkit-overflow-scrolling: touch;
         }
         .sidebar-logo {
-            padding: 24px 16px 16px;
+            padding: 16px 16px 12px;
             border-bottom: 1px solid var(--clr-border);
+            text-align: center;
+        }
+        .sidebar-logo .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--clr-gold);
+            margin-bottom: 8px;
+            background: var(--clr-card);
         }
         .sidebar-logo .arabic-title {
             font-family: var(--font-display);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--clr-gold);
             line-height: 1.3;
             text-align: center;
@@ -199,18 +209,9 @@
             font-size: 0.65rem;
             color: var(--clr-muted);
             text-align: center;
-            margin-top: 4px;
-            letter-spacing: 0.08em;
+            margin-top: 2px;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
-        }
-        .star-emblem {
-            display: flex;
-            justify-content: center;
-            margin: 8px 0 4px;
-        }
-        .star-emblem svg {
-            width: 40px;
-            height: 40px;
         }
 
         .sidebar-nav {
@@ -755,7 +756,7 @@
             padding: 8px 12px;
             border-radius: 12px;
             font-size: 0.85rem;
-            line-height: 1.5;
+            line-height: 1.6;
             max-width: 100%;
             word-break: break-word;
             overflow-wrap: break-word;
@@ -765,12 +766,43 @@
             border: 1px solid var(--clr-border);
             border-bottom-left-radius: 4px;
             color: var(--clr-offwhite);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .msg-wrap.user .msg-bubble {
             background: var(--clr-user-msg);
             border-bottom-right-radius: 4px;
             color: var(--clr-offwhite);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
+        /* Beautiful bot response styling */
+        .msg-wrap.bot .msg-bubble strong {
+            color: var(--clr-gold);
+            font-weight: 700;
+        }
+        .msg-wrap.bot .msg-bubble ul {
+            margin: 4px 0 4px 16px;
+            padding: 0;
+        }
+        .msg-wrap.bot .msg-bubble li {
+            list-style-type: disc;
+            margin-bottom: 2px;
+        }
+        .msg-wrap.bot .msg-bubble .highlight {
+            background: rgba(201, 168, 76, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--clr-gold-lt);
+        }
+        .msg-wrap.bot .msg-bubble .divider {
+            border-top: 1px solid var(--clr-border);
+            margin: 6px 0;
+        }
+        .msg-wrap.bot .msg-bubble .emoji-big {
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-right: 4px;
+        }
+
         .msg-time {
             font-size: 0.55rem;
             color: var(--clr-muted);
@@ -1599,23 +1631,9 @@
         <!-- ═══ SIDEBAR ═══ -->
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-logo">
-                <div class="star-emblem">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#F0D78C" />
-                                <stop offset="100%" style="stop-color:#C9A84C" />
-                            </radialGradient>
-                        </defs>
-                        <g transform="translate(50,50)">
-                            <polygon points="0,-42 8,-20 30,-30 20,-8 42,0 20,8 30,30 8,20 0,42 -8,20 -30,30 -20,8 -42,0 -20,-8 -30,-30 -8,-20" fill="url(#starGrad)" opacity="0.9" />
-                            <polygon points="0,-28 6,-12 20,-20 12,-6 28,0 12,6 20,20 6,12 0,28 -6,12 -20,20 -12,6 -28,0 -12,-6 -20,-20 -6,-12" fill="#0B2421" />
-                            <circle cx="0" cy="0" r="7" fill="url(#starGrad)" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="arabic-title">دار الحديث السلفية</div>
-                <div class="eng-title">Darul Hadeethi Salafiyya</div>
+                <img src="https://i.postimg.cc/qMm4kW3x/IMG-20260617-WA0003.jpg" alt="School Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="arabic-title">دار النصيحة السلفية</div>
+                <div class="eng-title">Darun Nasihatus Salafiyyah Bari School</div>
             </div>
 
             <div class="sidebar-nav">
@@ -1688,7 +1706,7 @@
             <div class="page active" id="page-home">
                 <div class="home-hero">
                     <div class="hero-badge">🌙 Islamic Academic Excellence</div>
-                    <h1>Welcome to <span>Darul Hadeethi</span><br>Salafiyya</h1>
+                    <h1>Welcome to <span>Darun Nasihatus</span><br>Salafiyyah Bari</h1>
                     <p>Providing authentic Islamic education rooted in Quran and Sunnah upon the understanding of the Pious Predecessors. Access school information, ask our AI assistant, and stay informed.</p>
                     <div class="hero-cta-group">
                         <button class="btn-primary" onclick="navigate('chat', document.querySelector('[data-page=chat]'))">💬 AI Assistant</button>
@@ -1793,8 +1811,8 @@
                     <div class="chat-header">
                         <div class="chat-avatar">🕌</div>
                         <div>
-                            <div class="chat-bot-name">DHS Assistant</div>
-                            <div class="chat-status">Online – Darul Hadeeth AI</div>
+                            <div class="chat-bot-name">DNSB Assistant</div>
+                            <div class="chat-status">Online – Darun Nasihat AI</div>
                         </div>
                     </div>
                     <div class="chat-messages" id="chatMessages">
@@ -1802,10 +1820,13 @@
                             <div class="msg-ava">🕌</div>
                             <div>
                                 <div class="msg-bubble">
-                                    Assalamu Alaikum 🌙<br><br>
-                                    I'm your DHS info assistant. Ask me about:<br>
-                                    📋 Admissions · 💳 Fees · 📚 Courses · 📅 Calendar · 📝 Exams<br>
-                                    🎓 Say <strong>"Register me"</strong> · 🔑 <strong>"Forgot ID"</strong>
+                                    <span class="emoji-big">🌙</span> <strong>Assalamu Alaikum!</strong><br><br>
+                                    Welcome to <strong>Darun Nasihatus Salafiyyah Bari School</strong> AI Assistant.<br><br>
+                                    I can help you with:<br>
+                                    📋 <strong>Admissions</strong> · 💳 <strong>Fees</strong> · 📚 <strong>Courses</strong><br>
+                                    📅 <strong>Calendar</strong> · 📝 <strong>Exams</strong><br><br>
+                                    🎓 Say <strong>"Register me"</strong> to create an account<br>
+                                    🔑 Say <strong>"Forgot ID"</strong> to recover your App ID
                                 </div>
                                 <div class="msg-time">Now</div>
                             </div>
@@ -2140,7 +2161,7 @@
             <div class="auth-error" id="authError"></div>
             <div class="form-group">
                 <label class="form-label">Email</label>
-                <input class="form-input" type="email" id="authEmail" placeholder="admin@dhs.edu.ng" />
+                <input class="form-input" type="email" id="authEmail" placeholder="admin@dnsb.edu.ng" />
             </div>
             <div class="form-group">
                 <label class="form-label">Password</label>
@@ -2159,7 +2180,7 @@
             <div class="auth-error" id="studentLoginError"></div>
             <div class="form-group">
                 <label class="form-label">App ID</label>
-                <input class="form-input" type="text" id="studentLoginId" placeholder="e.g. DHS-2025-001" />
+                <input class="form-input" type="text" id="studentLoginId" placeholder="e.g. DNSB-2025-001" />
             </div>
             <div class="form-group">
                 <label class="form-label">Password</label>
@@ -2175,9 +2196,9 @@
 
     <script>
         // ══════════════════════════════════
-        // GROQ AI CONFIG
+        // GROQ AI CONFIG (NEW API KEY)
         // ══════════════════════════════════
-        const GROQ_API_KEY = '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';
+        const GROQ_API_KEY = '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';
         const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
         // ══════════════════════════════════
@@ -2205,7 +2226,7 @@
         function generateAppId() {
             const year = new Date().getFullYear();
             const rand = String(Math.floor(100 + Math.random() * 900));
-            return 'DHS-' + year + '-' + rand;
+            return 'DNSB-' + year + '-' + rand;
         }
 
         // ══════════════════════════════════
@@ -2226,10 +2247,10 @@
                 document.getElementById('themeIcon').textContent = '🌙';
                 document.getElementById('themeLabel').textContent = 'Dark';
             }
-            localStorage.setItem('dhs_theme', currentTheme);
+            localStorage.setItem('dnsb_theme', currentTheme);
         }
 
-        const savedTheme = localStorage.getItem('dhs_theme');
+        const savedTheme = localStorage.getItem('dnsb_theme');
         if (savedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
             currentTheme = 'light';
@@ -2374,7 +2395,7 @@
                 closeStudentLogin();
                 showToast('✅ Welcome ' + found.fullname + '!');
                 document.getElementById('studentBadge').style.display = 'inline';
-                sessionStorage.setItem('dhs_student', JSON.stringify({ appId: found.appId }));
+                sessionStorage.setItem('dnsb_student', JSON.stringify({ appId: found.appId }));
                 navigate('student-dash', document.querySelector('[data-page=student-dash]'));
                 renderStudentDashboard();
             } catch (e) {
@@ -2386,13 +2407,13 @@
         function studentLogout() {
             currentStudent = null;
             document.getElementById('studentBadge').style.display = 'none';
-            sessionStorage.removeItem('dhs_student');
+            sessionStorage.removeItem('dnsb_student');
             showToast('Logged out.');
             navigate('home', document.querySelector('[data-page=home]'));
         }
 
         (async function restoreStudent() {
-            const stored = sessionStorage.getItem('dhs_student');
+            const stored = sessionStorage.getItem('dnsb_student');
             if (stored) {
                 try {
                     const s = JSON.parse(stored);
@@ -2755,7 +2776,7 @@
         }
 
         // ══════════════════════════════════
-        // CHAT + AI (Groq + Fallback)
+        // CHAT + AI (Groq + Fallback) – BEAUTIFUL RESPONSES
         // ══════════════════════════════════
         const messagesEl = document.getElementById('chatMessages');
         let chatHistoryLog = [];
@@ -2829,7 +2850,7 @@
                             { role: 'user', content: userMessage }
                         ],
                         temperature: 0.7,
-                        max_tokens: 800
+                        max_tokens: 1000
                     })
                 });
                 if (!response.ok) {
@@ -2846,6 +2867,43 @@
                 console.error('Groq fetch error:', e);
                 return null;
             }
+        }
+
+        // ── Format bot response beautifully ──
+        function formatBotResponse(text) {
+            // Bold patterns
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            // Emoji support
+            const emojiMap = {
+                'admission': '📋',
+                'fees': '💳',
+                'fee': '💳',
+                'courses': '📚',
+                'course': '📚',
+                'calendar': '📅',
+                'exam': '📝',
+                'exams': '📝',
+                'register': '🎓',
+                'registration': '🎓',
+                'login': '🔑',
+                'forgot': '🔑',
+                'app id': '🆔',
+                'password': '🔐'
+            };
+            // Add emoji prefixes for key terms
+            for (const [key, emoji] of Object.entries(emojiMap)) {
+                const regex = new RegExp(`\\b${key}\\b`, 'gi');
+                text = text.replace(regex, match => `${emoji} ${match}`);
+            }
+            // Convert bullet lists
+            text = text.replace(/^• /gm, '<li>').replace(/^\- /gm, '<li>');
+            if (text.includes('<li>')) {
+                text = text.replace(/\n/g, '');
+                text = '<ul>' + text.replace(/<li>/g, '<li>').replace(/<\/li>/g, '</li>') + '</ul>';
+            }
+            // Line breaks
+            text = text.replace(/\n/g, '<br>');
+            return text;
         }
 
         function getFallbackReply(userMsg) {
@@ -2870,7 +2928,7 @@
                 reply: `🔑 <strong>Login</strong><br>Use App ID and password. Click "Student Login" in top bar.`
             }, {
                 keys: ['hello', 'hi', 'salam', 'assalamu'],
-                reply: `Wa Alaikum Assalam 🌙 Welcome! Ask about admissions, fees, courses, calendar, exams, or say "Register me" to sign up.`
+                reply: `🌙 <strong>Wa Alaikum Assalam!</strong> Welcome to Darun Nasihatus Salafiyyah Bari School. Ask about admissions, fees, courses, calendar, exams, or say "Register me" to sign up.`
             }];
             for (const p of patterns) {
                 if (p.keys.some(k => lower.includes(k))) {
@@ -2922,7 +2980,7 @@
                         registrationState = null;
                         currentStudent = { id: docRef.id, fullname, dob, password, appId, courses: [] };
                         document.getElementById('studentBadge').style.display = 'inline';
-                        sessionStorage.setItem('dhs_student', JSON.stringify({ appId }));
+                        sessionStorage.setItem('dnsb_student', JSON.stringify({ appId }));
                         showToast('✅ Welcome ' + fullname + '!');
                         setTimeout(() => renderStudentDashboard(), 500);
                         return `✅ <strong>Registration Successful!</strong><br>🎓 Welcome, ${fullname}!<br>🆔 App ID: <strong style="color:var(--clr-gold);">${appId}</strong><br>Use this ID and password to login.`;
@@ -2988,9 +3046,25 @@
 
             // Groq
             const faqContext = await getFAQsContext();
-            const systemPrompt = `You are the Darul Hadeethi Salafiyya school assistant. Provide helpful, concise info about the school. Use the following context if relevant:\n${faqContext}`;
+            const systemPrompt = `You are the official AI assistant for Darun Nasihatus Salafiyyah Bari School, an Islamic school in Nigeria providing authentic Islamic education based on the Quran and Sunnah upon the Salafi methodology.
+
+School Name: Darun Nasihatus Salafiyyah Bari School (DNSB)
+Type: Islamic school (combining secular and Islamic education)
+Academic Year: 2025/2026 Session
+Terms: Three terms per session
+Admissions: Open, forms available at admin office
+Fee Range: ₦18,000–₦40,000 per term depending on level
+Courses: Quran, Hadith, Fiqh, Aqeedah, Arabic, English, Maths, Science, ICT and more
+Contact hours: Mon–Fri, 8:00am – 4:00pm
+
+${faqContext ? 'ADDITIONAL FAQs FROM DATABASE:\n' + faqContext : ''}
+
+Respond in a warm, professional, and respectful manner. Use Islamic greetings when appropriate. Format responses beautifully with clear structure, bullet points, and emphasis. Be concise but complete.`;
+
             const groqReply = await callGroq(systemPrompt, userMsg);
-            if (groqReply) return groqReply;
+            if (groqReply) {
+                return formatBotResponse(groqReply);
+            }
 
             // Fallback
             const fallback = getFallbackReply(userMsg);
@@ -3050,7 +3124,7 @@
             }, 1500);
             // Restore student
             (async () => {
-                const stored = sessionStorage.getItem('dhs_student');
+                const stored = sessionStorage.getItem('dnsb_student');
                 if (stored) {
                     try {
                         const s = JSON.parse(stored);
